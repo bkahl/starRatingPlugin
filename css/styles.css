@@ -1,0 +1,40 @@
+.star-rating { 
+	border: 0 none;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+ 	width: 720px;
+	padding: 15px;
+}
+
+.star-rating legend {
+	display: inline-block;
+	line-height: 18px;
+	float: left;
+ 	text-align: left;
+ 	width: 300px;
+}
+
+.star-rating input {
+	display: none;
+}
+
+label {
+	/*background-image: url('http://jsdev.brinkster.net/images/star-empty.png');*/
+	background-image: url('../images/star-empty-50.png');
+	background-repeat: no-repeat;
+	cursor: pointer;
+	float: right;
+	height: 50px;
+	padding-left: 18px;
+	text-indent: -9999px;
+	width: 52px;
+}
+
+.star-rating input:checked + label,
+.star-rating input:checked ~ label,
+/*works only for firefox, not chrome*/
+.star-rating input:hover ~ label { 
+	/*background-image: url('http://jsdev.brinkster.net/images/star-rated.png');*/
+	background-image: url('../images/star-rating-50.png');
+}
